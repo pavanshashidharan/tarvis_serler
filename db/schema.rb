@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160828080121) do
+ActiveRecord::Schema.define(version: 20160828215258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,34 +46,44 @@ ActiveRecord::Schema.define(version: 20160828080121) do
     t.datetime "updated_at",         null: false
   end
 
-  create_table "articles_authors", id: false, force: :cascade do |t|
-    t.integer "article_id", null: false
-    t.integer "author_id",  null: false
-    t.boolean "is_active"
+  create_table "articles_authors", force: :cascade do |t|
+    t.integer  "article_id"
+    t.integer  "author_id"
+    t.boolean  "is_active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "articles_dev_methods", id: false, force: :cascade do |t|
-    t.integer "article_id",    null: false
-    t.integer "dev_method_id", null: false
-    t.boolean "is_active"
+  create_table "articles_dev_methods", force: :cascade do |t|
+    t.integer  "article_id"
+    t.integer  "dev_method_id"
+    t.boolean  "is_active"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
-  create_table "articles_methodologies", id: false, force: :cascade do |t|
-    t.integer "article_id",     null: false
-    t.integer "methodology_id", null: false
-    t.boolean "is_active"
+  create_table "articles_methodologies", force: :cascade do |t|
+    t.integer  "article_id"
+    t.integer  "methodology_id"
+    t.boolean  "is_active"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
-  create_table "articles_research_methods", id: false, force: :cascade do |t|
-    t.integer "article_id",         null: false
-    t.integer "research_method_id", null: false
-    t.boolean "is_active"
+  create_table "articles_research_methods", force: :cascade do |t|
+    t.integer  "article_id"
+    t.integer  "research_method_id"
+    t.boolean  "is_active"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
-  create_table "articles_research_participants", id: false, force: :cascade do |t|
-    t.integer "article_id",              null: false
-    t.integer "research_participant_id", null: false
-    t.boolean "is_active"
+  create_table "articles_research_participants", force: :cascade do |t|
+    t.integer  "article_id"
+    t.integer  "research_participant_id"
+    t.boolean  "is_active"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "authors", force: :cascade do |t|
@@ -164,10 +174,12 @@ ActiveRecord::Schema.define(version: 20160828080121) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "users_roles", id: false, force: :cascade do |t|
-    t.integer "user_id",   null: false
-    t.integer "role_id",   null: false
-    t.boolean "is_active"
+  create_table "users_roles", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "role_id"
+    t.boolean  "is_active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
