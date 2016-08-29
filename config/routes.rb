@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  resources :methodologies
+  resources :dev_methods
+  resources :research_methods
+  resources :statuses
+  resources :authors
+  resources :articles
+  resources :article_types
+  resources :ratings
+  resources :feedbacks
+  resources :research_participants
+  resources :roles
+  resources :users
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
