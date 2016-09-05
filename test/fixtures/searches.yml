@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keywords: MyString
+  fields: MyString
+  volume: 9.99
+  issue: MyString
+  page: 9.99
+
+two:
+  keywords: MyString
+  fields: MyString
+  volume: 9.99
+  issue: MyString
+  page: 9.99

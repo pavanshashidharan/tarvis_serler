@@ -1,0 +1,22 @@
+<h1>Its working!!</h1>
+<%= form_tag tests_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search" %>
+<% end %>
+
+<% @tt.each do |article| %>
+    <tr>
+      <td><%= article.title %> <%= article.journal %></td>
+      <td><%= link_to 'Show', article %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td><%= link_to 'Destroy', article,
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></td>
+
+    </tr><br>
+<% end %>
+
+<div class="row">
+<div class="col-md-6">aaa</div>
+<div class="col-md-6">bbb</div>
+</div>

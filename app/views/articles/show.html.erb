@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @article.title %>
+  <strong>show Title:</strong>
+  <%= @article.title %> <%= @article.journal %>
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
+

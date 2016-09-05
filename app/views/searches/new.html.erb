@@ -1,0 +1,34 @@
+<h2>Advanced Search</h2>
+
+<%= form_for @search, html: {class: "pure-form"} do |s| %>
+
+<div class="field">
+  <%= s.label :keywords %></br>
+  <%= s.text_field :keywords %>
+</div>
+<div class="field">
+  <%= s.label :fields %>
+  <%= s.select :fields, options_for_select(@fields), :include_blank => true %>
+</div>
+<div class="field">
+  <p>
+    <%= s.label :volume, "Volume" %>
+    <%= s.text_field :volume %>
+  </p>
+  <p>
+    <%= s.label :issue, "Issue" %>
+    <%= s.text_field :issue %>
+  </p>
+  <p>
+    <%= s.label :page, "Page" %>
+    <%= s.text_field :page %>
+  </p>
+</div>
+
+<div class="actions">
+  <%= s.submit "Search", class: "pure-button pure-button-primary" %>
+</div>
+
+<% end %>
+
+<p><%= link_to 'Back', articles_path %></p>
